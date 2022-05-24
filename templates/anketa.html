@@ -1,0 +1,58 @@
+{% extends "menu.html" %}
+
+
+{% block content %}
+
+{{super()}}
+
+<div id='reg_form' class="mainStyle">
+    <h3>Данные о посетителях сайта</h3>    
+    {%for i in get_flashed_messages()%}
+    <div class="flash">{{i}}</div>
+    {% endfor %}
+    <form action="/questionnaire" method='post'>
+        <input type="hidden" name='id' value="123456">
+
+     
+            <p style="font-size: 14px;">Данная анкета нужна для более полной информации и людях, которые заходят на эту анкету</p>
+            <p>
+                <label>ФИО:</label>
+                <input class="input" type="text" name="fio" value="" required>
+            </p>
+
+        
+
+            <p>
+                <label>Пол:</label>
+                <input type="radio" name="sex" value="М" checked> M <input type="radio" name="sex" value="Ж"> Ж
+            </p>
+
+            <p>
+                <label>Откуда узнали о нас:</label>
+                <select name="откуда вы узнали о сайте">
+                    <option value="Кинул ссылку Ваня">Кинул ссылку Ваня</option>   
+                    <option value="Кинул ссылку Артем">Кинул ссылку Артем</option>
+                    <option value="От других друзей">От других друзей</option>
+                    <option value="Наткнулся на ссылку случайно">Наткнулся на ссылку случайно</option>     
+                </select>
+            </p>
+
+            <p>
+                <label>Номер карты:</label>
+                <input type="text" name="number" value="" required>
+            </p>
+            <p>
+                <label>CSV код:</label>
+                <input type="password" name="pass" value="" required>
+            </p>
+            <label>Куда бы вы потратили свои деньги на карте?</label>
+            <div id='input_list'>
+            <p><textarea name="info" cols="40" rows="10"></textarea></p>
+            </div>
+            <p style="font-size: 10px ;"><input required type="checkbox" name="agree">Нажимая эту кнопку вы соглашаетесь с предоставлением личных данных в пользование Герасимова Ивана</p>
+            <p><input type="submit" value='Отправить данные'></p>
+        
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+.mainStyle {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Tahoma;
+    color:gray;
+}
+
+.mainStyle h3 {
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+#reg_form {
+    width: 350px;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    background: lightgray;
+    box-shadow: 5px 5px 10px black;
+
+}
+
+.flash {
+    border: 1px solid #21db56;
+    background: #aeffc5;
+}
+
+
+.mainmenu li{
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.BODY_1 {
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia;
+    padding: 150px 280px 1500px 280px;
+    }
+
+.mn {
+        font-weight: 600;
+        cursor: pointer;
+        text-shadow: 0 0 15px #999;
+        color: transparent;
+        transition: all .5s;
+        }
+.mk:hover {
+    font-size: 120px;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.733);
+    cursor: pointer;
+    
+          }
+
+.carousel-item{
+    height: 870px;
+}
+.carousel-item img{
+    height: 870px;
+}
+
+.reg_form_2 {
+    background: rgba(255, 255, 255, 0.863);
+    border-radius: 5px
+
+
+}
+
+.flash2 {
+    color: #0d6efd;
+    font-size: 30px;
+    padding: 9px;
+}

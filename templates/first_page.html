@@ -1,0 +1,115 @@
+{% extends "menu.html" %}
+{% block content %}
+{{ super() }}
+<main>
+<div class="container-fluid" style="background-color: black; height: 800px;"><h2 class="BODY_1 mn mk">Home Sweet Home</h2></div>
+<div class="carousel slide" id='carouselControls' data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img class='d-block w-100' src="https://img2.badfon.ru/original/2048x1365/b/b8/sankt-peterburg-piter-st-821.jpg" alt="">
+        </div>
+
+        <div class="carousel-item">
+            <img class='d-block w-100' src="https://img3.badfon.ru/original/2048x1365/7/af/sankt-peterburg-piter-st-6092.jpg" alt="">
+        </div>
+
+        <div class="carousel-item">
+            <img class='d-block w-100' src="https://img3.badfon.ru/original/2048x1365/2/5e/sankt-peterburg-piter-st-6491.jpg" alt="">
+        </div>
+
+        <div class="carousel-item">
+            <img class='d-block w-100' src="https://img3.badfon.ru/original/2048x1365/1/6b/sankt-peterburg-piter-st-6419.jpg" alt="">
+        </div>
+
+        <div class="carousel-item">
+            <img class='d-block w-100' src="https://img2.badfon.ru/original/2048x1365/5/9b/sankt-peterburg-piter-st-4018.jpg" alt="">
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselControls"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+     </button>
+</div>
+
+<!-- Wrapper container -->
+<div style="background-color: black; height:1200px; padding-top: 180px;">
+<div style='width: 600px' class="container">
+<div class="reg_form_2">
+    <h3 style="font-family: Arial, Tahoma; padding: 7px; font-size: 28px; margin: 10px 0 20px 0;padding-bottom: 8px;border-bottom: 1px solid black;">Data about site visitors</h3>    
+    {%for i in get_flashed_messages()%}
+    <div class="flash2">{{i}}</div>
+    {% endfor %}
+    <!-- Bootstrap 5 starter form -->
+    <form style='width: 576px' id="contactForm" data-sb-form-api-token="API_TOKEN" action="/first_page" method='post'>
+        <input type="hidden" name='id' value="123456">
+        
+        <p style="font-size: 14px; padding: 9px;">This questionnaire is needed for more complete information about the people who visit this site.</p>
+
+      <!-- Name input -->
+      <div style='padding: 9px' class="mb-3">
+        <label class="form-label" for="name">Name:</label>
+        <input class="form-control" style="background-color: rgba(255, 255, 255, 0.63);" id="name" name="name" value="" type="text" placeholder="Name" data-sb-validations="required" required/>
+        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+      </div>
+  
+      <!-- Email address input -->
+      <div style='padding: 9px' class="mb-3">
+        <label class="form-label"  for="emailAddress">Email Address:</label>
+        <input class="form-control" style="background-color: rgba(255, 255, 255, 0.63)" id="emailAddress" name="email" value="" type="email" placeholder="Email Address" data-sb-validations="required, email" required/>
+        <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+        <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+      </div>
+
+  
+        <div style='padding: 9px' class="mb-3">
+            <label class="form-label" for="sex">Sex:</label>
+            <br>
+            <input style="background-color: rgba(255, 255, 255, 0.63);" data-sb-validations="required" type="radio" name="sex" value="М" checked> M <input type="radio" name="sex" value="Ж"> W
+        </div>
+
+        <div style='padding: 9px' class="mb-3">
+            <label>How old are you:</label>
+            <select name="y.o.">
+                <option value="12-18">12-18</option>   
+                <option value="18-21">18-21</option>
+                <option value="21-35">21-35</option>
+                <option value="35-55">35-55</option>
+                <option value="55-80">55-80</option>     
+                <option value="80+">80+</option>
+            </select>
+        </div>
+
+
+         <!-- Message input -->
+        <div style='padding: 9px' class="mb-3">
+            <label class="form-label" for="message">Hobbies:</label>
+            <textarea name="info" style="background-color: rgba(255, 255, 255, 0.63)" class="form-control" id="message" type="text" placeholder="Hobbies" style="height: 10rem;" data-sb-validations="required"></textarea>
+            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+        </div>
+
+        <div style='padding: 5px' class="mb-3">
+            <p style="font-size: 11px ;" ><input required type="checkbox" name="agree">I agree with the Privacy Policy</p>
+        </div>
+
+  
+      <!-- Form submit button -->
+      <div class="d-grid">
+        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+      </div>
+  
+    </form>
+  
+  </div>
+  
+  <!-- SB Forms JS -->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</div>
+</div>
+</main>
+{% endblock %}

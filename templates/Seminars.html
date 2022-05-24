@@ -1,0 +1,41 @@
+{% extends "menu.html" %}
+{% block content %}
+{{ super() }}
+
+<br>
+
+<div class="container">
+    <h2>First Seminar</h2>
+    <div class="list-group">
+      <a href="/seminar1" class="list-group-item ">
+        <h4 class="list-group-item-heading">Task №1</h4>
+        <p style="font-size: 14px; color: gray;" class="list-group-item-text">17.09.2021</p>
+      </a>
+      <a href="/questionnaire" class="list-group-item">
+        <h4 class="list-group-item-heading">Task №2</h4>
+        <p style="font-size: 14px; color: gray;" class="list-group-item-text">17.09.2021</p>
+      </a>
+    </div>
+</div>
+ 
+<br><br>
+
+<div class="container" >
+    <h2>Second Seminar</h2>
+    <div class="list-group">
+        <a href="/first_page" class="list-group-item ">
+          <h4 class="list-group-item-heading">Task №0</h4>
+          <p style="font-size: 14px; color: gray;" class="list-group-item-text">27.09.2021</p>
+        </a>
+        <a href="/Seminars" class="list-group-item">
+          <h4 class="list-group-item-heading">Task №1</h4>
+          <p style="font-size: 14px; color: gray;" class="list-group-item-text">27.09.2021</p>
+        </a>
+        <a href="/developers" class="list-group-item">
+            <h4 class="list-group-item-heading">Task №2</h4>
+            <p style="font-size: 14px; color: gray;" class="list-group-item-text">27.09.2021</p>
+          </a>
+      </div>
+</div>
+
+{% endblock %}
