@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request
 from flask.helpers import flash
- 
+
 app = Flask(__name__)
 app.config['SECRET_KEY']='knjbibib5t2v9o2y0a3m1a4t6b2s6h7l6u5x8a'
 
@@ -52,3 +52,4 @@ def first_page():
 if __name__ == "__main__":
    app.run(debug=True)
 
+ # Gerasimov Ivan
